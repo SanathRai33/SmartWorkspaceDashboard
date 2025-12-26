@@ -1,5 +1,4 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +8,13 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <main>
+      <h1>Welcome to React Router!</h1>
+      <p>
+        This is a starter template for your new React Router app. Feel free to
+        explore and modify it as you like.
+      </p>
+    </main>
+  );
 }
