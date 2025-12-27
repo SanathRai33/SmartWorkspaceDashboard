@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header = ({title, description}: any) => {
+const Header = ({title, description}) => {
   return (
     <section className='px-2 py-4 max-w-7xl flex flex-col gap-2'>
       <h1 className='text-4xl font-bold text-black'>{title}</h1>

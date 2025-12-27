@@ -32,7 +32,7 @@ const DocumentationCard = () => {
     }
   ];
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category) => {
     const colors = {
       documentation: "bg-blue-100 text-blue-800",
       backend: "bg-purple-100 text-purple-800",

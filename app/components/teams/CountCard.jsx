@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CountCard = ({ title, count, style, icon: Icon }: any) => {
+const CountCard = ({ title, count, style, icon: Icon }) => {
   return (
     <div className="bg-white shadow-md rounded-lg p-6 w-64 hover:shadow-lg">
       <div className={`mb-4 w-10 h-10 flex items-center justify-center rounded-md text-4xl ${style}`}>

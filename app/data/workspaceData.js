@@ -1,69 +1,540 @@
-export const workspaceData = {
-  teams: [
-    {
-      id: "team-1",
-      name: "Frontend Team",
-      projects: [
-        {
-          id: "project-1",
-          name: "Dashboard UI",
-          tasks: [
-            {
-              id: "task-1",
-              title: "Create layout structure",
-              status: "todo"
-            },
-            {
-              id: "task-2",
-              title: "Build navigation bar",
-              status: "in-progres"
-            },
-            {
-              id: "task-3",
-              title: "Finalize desgin review",
-              status: "done"
-            }
-          ]
-        },
-        {
-          id: "project-2",
-          name: "Landing Page",
-          tasks: [
-            {
-              id: "task-4",
-              title: "Hero section",
-              status: "todo"
-            },
-            {
-              id: "task-5",
-              title: "Responsive fixes",
-              status: "in-progress"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: "team-2",
-      name: "Backend Team",
-      projects: [
-        {
-          id: "project-3",
-          name: "API Development",
-          tasks: [
-            {
-              id: "task-6",
-              title: "Setup server",
-              status: "done"
-            },
-            {
-              id: "task-7",
-              title: "Create task endpoints",
-              status: "todo"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-};
+// teams.js
+export const teams = [
+  {
+    id: "team-1",
+    name: "Frontend Team",
+    description: "Responsible for user interfaces",
+  },
+  {
+    id: "team-2",
+    name: "Backend Team",
+    description: "Handles server-side logic and APIs",
+  },
+  {
+    id: "team-3",
+    name: "Mobile Team",
+    description: "Develops iOS and Android applications",
+  },
+  {
+    id: "team-4",
+    name: "QA Team",
+    description: "Quality assurance and testing",
+  },
+  {
+    id: "team-5",
+    name: "DevOps Team",
+    description: "Infrastructure and deployment",
+  },
+  {
+    id: "team-6",
+    name: "Design Team",
+    description: "UI/UX design and branding",
+  },
+];
+
+// teamMembers.js
+export const teamMembers = [
+  {
+    id: "member-1",
+    name: "Alice Johnson",
+    role: "UI/UX Designer",
+    teamId: "team-1",
+  },
+  {
+    id: "member-2",
+    name: "Bob Smith",
+    role: "Frontend Developer",
+    teamId: "team-1",
+  },
+  {
+    id: "member-3",
+    name: "Charlie Davis",
+    role: "Backend Engineer",
+    teamId: "team-2",
+  },
+  {
+    id: "member-4",
+    name: "Diana Miller",
+    role: "Database Architect",
+    teamId: "team-2",
+  },
+  {
+    id: "member-5",
+    name: "Ethan Wilson",
+    role: "DevOps Engineer",
+    teamId: "team-2",
+  },
+  {
+    id: "member-6",
+    name: "Fiona Brown",
+    role: "iOS Developer",
+    teamId: "team-3",
+  },
+  {
+    id: "member-7",
+    name: "George Taylor",
+    role: "Android Developer",
+    teamId: "team-3",
+  },
+  {
+    id: "member-8",
+    name: "Helen Clark",
+    role: "QA Engineer",
+    teamId: "team-4",
+  },
+  {
+    id: "member-9",
+    name: "Ian Lewis",
+    role: "Test Automation Engineer",
+    teamId: "team-4",
+  },
+  {
+    id: "member-10",
+    name: "Jack Robinson",
+    role: "DevOps Engineer",
+    teamId: "team-5",
+  },
+  {
+    id: "member-11",
+    name: "Katie Hall",
+    role: "Security Specialist",
+    teamId: "team-5",
+  },
+  {
+    id: "member-12",
+    name: "Liam Walker",
+    role: "Lead Designer",
+    teamId: "team-6",
+  },
+  {
+    id: "member-13",
+    name: "Mia Roberts",
+    role: "Graphic Designer",
+    teamId: "team-6",
+  },
+  {
+    id: "member-14",
+    name: "Noah White",
+    role: "UI Designer",
+    teamId: "team-6",
+  },
+];
+
+// projects.js
+export const projects = [
+  {
+    id: "project-1",
+    name: "Dashboard UI",
+    teamId: "team-1",
+    date: "2024-01-15",
+  },
+  {
+    id: "project-2",
+    name: "Authentication Module",
+    teamId: "team-1",
+    date: "2024-01-20",
+  },
+  {
+    id: "project-3",
+    name: "API Gateway",
+    teamId: "team-2",
+    date: "2024-01-25",
+  },
+  {
+    id: "project-4",
+    name: "Database Schema",
+    teamId: "team-2",
+    date: "2024-01-30",
+  },
+  {
+    id: "project-5",
+    name: "WebSocket Server",
+    teamId: "team-2",
+    date: "2024-02-05",
+  },
+  { id: "project-6",
+    name: "iOS App",
+    teamId: "team-3", 
+    date: "2024-02-10" 
+  },
+  {
+    id: "project-7",
+    name: "Android App",
+    teamId: "team-3",
+    date: "2024-02-15",
+  },
+  {
+    id: "project-8",
+    name: "Testing Framework",
+    teamId: "team-4",
+    date: "2024-02-01",
+  },
+  {
+    id: "project-9",
+    name: "Bug Tracking",
+    teamId: "team-4",
+    date: "2024-02-20",
+  },
+  {
+    id: "project-10",
+    name: "CI/CD Pipeline",
+    teamId: "team-5",
+    date: "2024-02-25",
+  },
+  {
+    id: "project-11",
+    name: "Monitoring System",
+    teamId: "team-5",
+    date: "2024-03-01",
+  },
+  {
+    id: "project-12",
+    name: "Security Audit",
+    teamId: "team-5",
+    date: "2024-03-10",
+  },
+  {
+    id: "project-13",
+    name: "Design System",
+    teamId: "team-6",
+    date: "2024-02-28",
+  },
+  {
+    id: "project-14",
+    name: "Brand Identity",
+    teamId: "team-6",
+    date: "2024-03-05",
+  },
+];
+
+// tasks.js
+export const tasks = [
+  {
+    id: "task-1",
+    title: "Create layout structure",
+    status: "todo",
+    projectId: "project-1",
+    start: "2024-01-01",
+    end: "2024-01-05",
+  },
+  {
+    id: "task-2",
+    title: "Build navigation bar",
+    status: "in-progress",
+    projectId: "project-1",
+    start: "2024-01-06",
+    end: "2024-01-10",
+  },
+  {
+    id: "task-3",
+    title: "Finalize design review",
+    status: "done",
+    projectId: "project-1",
+    start: "2024-01-11",
+    end: "2024-01-15",
+  },
+  {
+    id: "task-4",
+    title: "Design login page",
+    status: "done",
+    projectId: "project-2",
+    start: "2024-01-10",
+    end: "2024-01-12",
+  },
+  {
+    id: "task-5",
+    title: "Implement OAuth flow",
+    status: "in-progress",
+    projectId: "project-2",
+    start: "2024-01-13",
+    end: "2024-01-18",
+  },
+  {
+    id: "task-6",
+    title: "Add password reset",
+    status: "todo",
+    projectId: "project-2",
+    start: "2024-01-19",
+    end: "2024-01-22",
+  },
+  {
+    id: "task-7",
+    title: "Setup Express server",
+    status: "done",
+    projectId: "project-3",
+    start: "2024-01-05",
+    end: "2024-01-08",
+  },
+  {
+    id: "task-8",
+    title: "Add rate limiting",
+    status: "in-progress",
+    projectId: "project-3",
+    start: "2024-01-09",
+    end: "2024-01-12",
+  },
+  {
+    id: "task-9",
+    title: "Implement logging",
+    status: "todo",
+    projectId: "project-3",
+    start: "2024-01-13",
+    end: "2024-01-16",
+  },
+  {
+    id: "task-10",
+    title: "Add API documentation",
+    status: "todo",
+    projectId: "project-3",
+    start: "2024-01-17",
+    end: "2024-01-20",
+  },
+  {
+    id: "task-11",
+    title: "Design user table",
+    status: "done",
+    projectId: "project-4",
+    start: "2024-01-10",
+    end: "2024-01-12",
+  },
+  {
+    id: "task-12",
+    title: "Create project relations",
+    status: "done",
+    projectId: "project-4",
+    start: "2024-01-13",
+    end: "2024-01-15",
+  },
+  {
+    id: "task-13",
+    title: "Add indexes",
+    status: "in-progress",
+    projectId: "project-4",
+    start: "2024-01-16",
+    end: "2024-01-18",
+  },
+  {
+    id: "task-14",
+    title: "Setup Socket.io",
+    status: "todo",
+    projectId: "project-5",
+    start: "2024-01-20",
+    end: "2024-01-23",
+  },
+  {
+    id: "task-15",
+    title: "Implement real-time updates",
+    status: "todo",
+    projectId: "project-5",
+    start: "2024-01-24",
+    end: "2024-01-27",
+  },
+  {
+    id: "task-16",
+    title: "Setup Xcode project",
+    status: "done",
+    projectId: "project-6",
+    start: "2024-01-15",
+    end: "2024-01-16",
+  },
+  {
+    id: "task-17",
+    title: "Implement navigation",
+    status: "in-progress",
+    projectId: "project-6",
+    start: "2024-01-17",
+    end: "2024-01-20",
+  },
+  {
+    id: "task-18",
+    title: "Add push notifications",
+    status: "todo",
+    projectId: "project-6",
+    start: "2024-01-21",
+    end: "2024-01-25",
+  },
+  {
+    id: "task-19",
+    title: "Create Android Studio project",
+    status: "done",
+    projectId: "project-7",
+    start: "2024-01-16",
+    end: "2024-01-17",
+  },
+  {
+    id: "task-20",
+    title: "Design main activity",
+    status: "in-progress",
+    projectId: "project-7",
+    start: "2024-01-18",
+    end: "2024-01-22",
+  },
+  {
+    id: "task-21",
+    title: "Integrate Firebase",
+    status: "todo",
+    projectId: "project-7",
+    start: "2024-01-23",
+    end: "2024-01-26",
+  },
+  {
+    id: "task-22",
+    title: "Write unit tests",
+    status: "done",
+    projectId: "project-8",
+    start: "2024-01-10",
+    end: "2024-01-15",
+  },
+  {
+    id: "task-23",
+    title: "Create integration tests",
+    status: "in-progress",
+    projectId: "project-8",
+    start: "2024-01-16",
+    end: "2024-01-20",
+  },
+  {
+    id: "task-24",
+    title: "Setup E2E testing",
+    status: "todo",
+    projectId: "project-8",
+    start: "2024-01-21",
+    end: "2024-01-25",
+  },
+  {
+    id: "task-25",
+    title: "Integrate with JIRA",
+    status: "done",
+    projectId: "project-9",
+    start: "2024-01-18",
+    end: "2024-01-20",
+  },
+  {
+    id: "task-26",
+    title: "Create bug reports",
+    status: "in-progress",
+    projectId: "project-9",
+    start: "2024-01-21",
+    end: "2024-01-25",
+  },
+  {
+    id: "task-27",
+    title: "Automate bug detection",
+    status: "todo",
+    projectId: "project-9",
+    start: "2024-01-26",
+    end: "2024-01-30",
+  },
+  {
+    id: "task-28",
+    title: "Setup GitHub Actions",
+    status: "done",
+    projectId: "project-10",
+    start: "2024-01-05",
+    end: "2024-01-08",
+  },
+  {
+    id: "task-29",
+    title: "Configure Docker",
+    status: "in-progress",
+    projectId: "project-10",
+    start: "2024-01-09",
+    end: "2024-01-12",
+  },
+  {
+    id: "task-30",
+    title: "Deploy to AWS",
+    status: "todo",
+    projectId: "project-10",
+    start: "2024-01-13",
+    end: "2024-01-17",
+  },
+  {
+    id: "task-31",
+    title: "Install Grafana",
+    status: "done",
+    projectId: "project-11",
+    start: "2024-01-15",
+    end: "2024-01-17",
+  },
+  {
+    id: "task-32",
+    title: "Setup Prometheus",
+    status: "in-progress",
+    projectId: "project-11",
+    start: "2024-01-18",
+    end: "2024-01-22",
+  },
+  {
+    id: "task-33",
+    title: "Configure alerts",
+    status: "todo",
+    projectId: "project-11",
+    start: "2024-01-23",
+    end: "2024-01-26",
+  },
+  {
+    id: "task-34",
+    title: "Run vulnerability scan",
+    status: "todo",
+    projectId: "project-12",
+    start: "2024-01-27",
+    end: "2024-01-30",
+  },
+  {
+    id: "task-35",
+    title: "Implement security fixes",
+    status: "todo",
+    projectId: "project-12",
+    start: "2024-01-31",
+    end: "2024-02-03",
+  },
+  {
+    id: "task-36",
+    title: "Create color palette",
+    status: "done",
+    projectId: "project-13",
+    start: "2024-01-08",
+    end: "2024-01-10",
+  },
+  {
+    id: "task-37",
+    title: "Design component library",
+    status: "in-progress",
+    projectId: "project-13",
+    start: "2024-01-11",
+    end: "2024-01-15",
+  },
+  {
+    id: "task-38",
+    title: "Document guidelines",
+    status: "todo",
+    projectId: "project-13",
+    start: "2024-01-16",
+    end: "2024-01-19",
+  },
+  {
+    id: "task-39",
+    title: "Design logo variations",
+    status: "done",
+    projectId: "project-14",
+    start: "2024-01-12",
+    end: "2024-01-14",
+  },
+  {
+    id: "task-40",
+    title: "Create brand assets",
+    status: "in-progress",
+    projectId: "project-14",
+    start: "2024-01-15",
+    end: "2024-01-18",
+  },
+  {
+    id: "task-41",
+    title: "Update marketing materials",
+    status: "todo",
+    projectId: "project-14",
+    start: "2024-01-19",
+    end: "2024-01-22",
+  },
+];

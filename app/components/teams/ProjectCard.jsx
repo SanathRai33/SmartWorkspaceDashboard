@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowRight, FaFolder, FaUser } from "react-icons/fa";
 
-const ProjectCard = ({ id, title, description, status, members, tasks }: any) => {
+const ProjectCard = ({ id, title, description, status, members, tasks }) => {
 
     const colorPalette = ["bg-pink-500", "bg-blue-500", "bg-green-500", "bg-yellow-500", "bg-purple-500"];
 
