@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "~/components/layout/Header";
-import TaskCard from "~/components/task/TaskCard";
+import TaskCard from "~/components/tasks/TaskCard";
 
 export default function tasks() {
   return (

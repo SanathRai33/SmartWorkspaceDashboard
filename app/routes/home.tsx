@@ -1,6 +1,6 @@
 import type { Route } from "./+types/home";
 import Header from "~/components/layout/Header";
-import CountCard from "~/components/project/CountCard";
+import CountCard from "~/components/teams/CountCard";
 import { 
   Groups as TeamIcon,
   People as MembersIcon,
@@ -8,7 +8,7 @@ import {
   Pending as PendingIcon,
   CheckCircle as CompletedIcon 
 } from '@mui/icons-material';
-import ProjectCard from "~/components/project/ProjectCard";
+import ProjectCard from "~/components/teams/ProjectCard";
 
 export function meta({}: Route.MetaArgs) {
   return [
