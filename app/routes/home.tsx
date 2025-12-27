@@ -1,5 +1,5 @@
 import type { Route } from "./+types/home";
-import TeamOverviewHeader from "~/components/TeamOverviewHeader";
+import Header from "~/components/Header";
 import CountCard from "~/components/CountCard";
 import { 
   Groups as TeamIcon,
@@ -35,14 +35,14 @@ const projectData = [
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen py-4 px-20">
-      <TeamOverviewHeader />
+    <main className="w-full min-h-screen py-4 px-4 sm:px-4 lg:px-20">
+      <Header title="Team Overview" description="Manage and collaborate with your teams" />
       <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {countData.map((data, i) => (
           <CountCard key={i} title={data.label} count={data.count} icon={data.icon} style={data.style} />
         ))}
       </div>
-      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 ">
         {projectData.map((data, i) => (
           <ProjectCard key={i} id={i} title={data.title} description={data.description} status={data.status} members={data.members} tasks={data.tasks} />
         ))}
