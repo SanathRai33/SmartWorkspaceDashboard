@@ -43,7 +43,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-50">
       <header className="border-b bg-white">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <h1 className="text-xl font-semibold">
@@ -52,7 +52,7 @@ export default function App() {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 py-6">
+      <main className="px-4 py-6 flex items-center justify-center">
         <Outlet />
       </main>
     </div>
