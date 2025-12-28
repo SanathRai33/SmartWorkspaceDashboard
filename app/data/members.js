@@ -1,0 +1,86 @@
+export const teamMembers = [
+  {
+    id: "member-1",
+    name: "Alice Johnson",
+    role: "UI/UX Designer",
+    teamId: "team-1",
+  },
+  {
+    id: "member-2",
+    name: "Bob Smith",
+    role: "Frontend Developer",
+    teamId: "team-1",
+  },
+  {
+    id: "member-3",
+    name: "Charlie Davis",
+    role: "Backend Engineer",
+    teamId: "team-2",
+  },
+  {
+    id: "member-4",
+    name: "Diana Miller",
+    role: "Database Architect",
+    teamId: "team-2",
+  },
+  {
+    id: "member-5",
+    name: "Ethan Wilson",
+    role: "DevOps Engineer",
+    teamId: "team-2",
+  },
+  {
+    id: "member-6",
+    name: "Fiona Brown",
+    role: "iOS Developer",
+    teamId: "team-3",
+  },
+  {
+    id: "member-7",
+    name: "George Taylor",
+    role: "Android Developer",
+    teamId: "team-3",
+  },
+  {
+    id: "member-8",
+    name: "Helen Clark",
+    role: "QA Engineer",
+    teamId: "team-4",
+  },
+  {
+    id: "member-9",
+    name: "Ian Lewis",
+    role: "Test Automation Engineer",
+    teamId: "team-4",
+  },
+  {
+    id: "member-10",
+    name: "Jack Robinson",
+    role: "DevOps Engineer",
+    teamId: "team-5",
+  },
+  {
+    id: "member-11",
+    name: "Katie Hall",
+    role: "Security Specialist",
+    teamId: "team-5",
+  },
+  {
+    id: "member-12",
+    name: "Liam Walker",
+    role: "Lead Designer",
+    teamId: "team-6",
+  },
+  {
+    id: "member-13",
+    name: "Mia Roberts",
+    role: "Graphic Designer",
+    teamId: "team-6",
+  },
+  {
+    id: "member-14",
+    name: "Noah White",
+    role: "UI Designer",
+    teamId: "team-6",
+  },
+];

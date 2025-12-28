@@ -8,7 +8,8 @@ import {
   Pending as PendingIcon,
   CheckCircle as CompletedIcon,
 } from "@mui/icons-material";
-import { projects, tasks } from "~/data/workspaceData";
+import { projects } from "~/data/projects";
+import { tasks } from "~/data/tasks";
 
 export function meta({ }) {
   return [
