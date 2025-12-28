@@ -9,6 +9,7 @@ import {
 
 import "./app.css";
 import Navbar from "./components/layout/Navbar";
+import { TaskProvider } from "./contexts/TaskContext";
 
 export const links = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -43,13 +44,15 @@ export function Layout({ children }) {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-50">
-      <Navbar />
+    <TaskProvider>
+      <div className="min-h-screen bg-slate-50">
+        <Navbar />
 
-      <main className=" py-4 px-4 sm:px-4 lg:px-20 flex items-center justify-center">
-        <Outlet />
-      </main>
-    </div>
+        <main className=" py-4 px-4 sm:px-4 lg:px-20 flex items-center justify-center">
+          <Outlet />
+        </main>
+      </div>
+    </TaskProvider>
   );
 }
 

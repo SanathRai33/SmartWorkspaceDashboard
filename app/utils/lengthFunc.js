@@ -1,19 +1,18 @@
 import { teams } from '../data/teams.js'
 import { teamMembers } from '../data/members.js'
-import { tasks } from '../data/tasks.js'
 
 export const getTotalTeams = () => teams.length;
 
 export const getTotalMembers = () => teamMembers.length;
 
-export const getTotalInProgressTasks = () => {
+export const getTotalInProgressTasks = (tasks) => {
   return tasks.filter(task => task.status === 'in-progress').length;
 };
 
-export const getTotalCompleteTask = () => {
+export const getTotalCompleteTask = (tasks) => {
   return tasks.filter(task => task.status === 'done').length;
 }
 
-export const getTotalPendingTask = () => {
+export const getTotalPendingTask = (tasks) => {
   return tasks.filter(task => task.status === 'todo').length;
 }

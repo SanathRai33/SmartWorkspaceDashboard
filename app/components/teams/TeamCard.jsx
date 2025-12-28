@@ -45,7 +45,7 @@ const TeamCard = ({ id, title, description, status, tasks, projects }) => {
         <div className="bg-gray-100 rounded-lg px-3 py-1 h-fit">
           <div className="flex items-center">
             <FaTasks className="text-green-500 mr-2" />
-            <span className="text-sm font-medium text-gray-600">Tasks</span>
+            <span className="text-sm font-medium text-gray-600">Active Tasks</span>
           </div>
           <p className="text-2xl font-bold text-gray-900">{tasks}</p>
         </div>

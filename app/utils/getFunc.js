@@ -21,3 +21,13 @@ export function getDoneTaskByProjectId(projectId) {
 export function getMembersByTaskId(taskId){
   return teamMembers.filter((mem) => mem.taskIds.includes(taskId));
 }
+
+export function getStatusCountById(projectId) {
+  const total = tasks.filter((task) => task.projectId == projectId);
+
+  const todo = total.filter((t) => t.status == "todo").length;
+  const progress = total.filter((t) => t.status == "in-progress").length;
+  const done = total.filter((t) => t.status == "done").length;
+
+  return { todo, progress, done}
+}

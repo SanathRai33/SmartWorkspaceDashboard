@@ -1,6 +1,5 @@
 import React from 'react'
-import { getDoneTaskByProjectId, getStatusCountById } from '../../utils/getFunc'
-import { FaCheck, FaClock, FaFolder } from 'react-icons/fa';
+import { getDoneTaskByProjectId } from '../../utils/getFunc'
 
 function ProjectCard({ id, date, endDate, name, description }) {
 
@@ -10,17 +9,15 @@ function ProjectCard({ id, date, endDate, name, description }) {
 
     const color = progress < 25 ? 'red' : progress < 50 ? 'yellow' : progress < 90 ? 'skyBlue' : 'grren'
 
-    const count = getStatusCountById(id);
-
     return (
         <div className='bg-white rounded-xl w-full shadow-sm border border-gray-200 p-5 hover:shadow-md transition-shadow'>
             <div className='flex items-start justify-between mb-4'>
                 <div className='flex-1'>
                     <h1 className='text-lg font-bold text-gray-900'>{name}</h1>
-                    <p className='text-sm text-gray-600 mt-1 min-h-10'>{description}</p>
+                    <p className='text-sm text-gray-600 mt-1'>{description}</p>
                 </div>
             </div>
-            <div className='flex flex-col space-y-2 p-4 bg-amber-50 rounded-t-lg'>
+            <div className='flex flex-col space-y-2 p-4 bg-amber-50 rounded-lg'>
                 <div className='flex justify-between'>
                     <span className='text-sm font-medium text-gray-700'>Progress</span>
                     <span className='text-sm font-bold text-gray-900'>{progress}%</span>
@@ -29,18 +26,6 @@ function ProjectCard({ id, date, endDate, name, description }) {
                     <div className='bg-green-500 h-full rounded-full transition-all duration-500'
                         style={{ width: `${progress}%`, backgroundColor: color }}
                     ></div>
-                </div>
-            </div>
-
-            <div className='flex justify-between space-y-2 p-4 bg-slate-50 rounded-b-lg text-black'>
-                <div className='shadow-md p-2 max-h-10 rounded-md text-blue-700 flex items-center gap-1 bg-blue-50'>
-                    <FaFolder/> <span>Todo: </span> <span>{count.todo}</span>
-                </div>
-                <div className='shadow-md px-4 py-2 max-h-10 rounded-md text-yellow-700 flex items-center gap-1 bg-yellow-50'>
-                    <FaClock/><span>Progress: </span> <span>{count.progress}</span>
-                </div>
-                <div className='shadow-md px-4 py-2 max-h-10 rounded-md text-green-700 flex items-center gap-1 bg-green-50'>
-                    <FaCheck/><span>Done: </span> <span>{count.done}</span>
                 </div>
             </div>
             <div className='flex items-center justify-between pt-4 border-t border-gray-100'>
