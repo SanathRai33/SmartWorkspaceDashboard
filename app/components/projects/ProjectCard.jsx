@@ -2,15 +2,20 @@ import React from 'react'
 import { getDoneTaskByProjectId, getStatusCountById } from '../../utils/getFunc'
 import { FaCheck, FaClock, FaFolder } from 'react-icons/fa';
 
-function ProjectCard({ id, date, endDate, name, description }) {
-
-    const doneTask = getDoneTaskByProjectId(id);
-
-    const progress = Math.floor((doneTask.done / doneTask.total) * 100)
-
-    const color = progress < 25 ? 'red' : progress < 50 ? 'yellow' : progress < 90 ? 'skyBlue' : 'grren'
+function ProjectCard({ id, date, endDate, name, description, status }) {
 
     const count = getStatusCountById(id);
+    const totalTasks = count.todo + count.progress + count.done;
+    const progress = totalTasks > 0 ? Math.floor((count.done / totalTasks) * 100) : 0;
+
+    const getProgressColor = (progress) => {
+        if (progress < 25) return '#ef4444'; 
+        if (progress < 50) return '#eab308'; 
+        if (progress < 90) return '#0ea5e9'; 
+        return '#22c55e'; 
+    };
+
+    const isCompleted = status === 'completed';
 
     return (
         <div className='bg-white rounded-xl w-full shadow-sm border border-gray-200 p-5 hover:shadow-md transition-shadow'>
@@ -20,52 +25,56 @@ function ProjectCard({ id, date, endDate, name, description }) {
                     <p className='text-sm text-gray-600 mt-1 min-h-10'>{description}</p>
                 </div>
             </div>
+            
             <div className='flex flex-col space-y-2 p-4 bg-amber-50 rounded-t-lg'>
                 <div className='flex justify-between'>
                     <span className='text-sm font-medium text-gray-700'>Progress</span>
                     <span className='text-sm font-bold text-gray-900'>{progress}%</span>
                 </div>
                 <div className='w-full bg-gray-200 h-2 rounded-full overflow-hidden'>
-                    <div className='bg-green-500 h-full rounded-full transition-all duration-500'
-                        style={{ width: `${progress}%`, backgroundColor: color }}
+                    <div 
+                        className='h-full rounded-full transition-all duration-500'
+                        style={{ 
+                            width: `${progress}%`, 
+                            backgroundColor: getProgressColor(progress) 
+                        }}
                     ></div>
                 </div>
             </div>
 
-            <div className='flex justify-between space-y-2 p-4 bg-slate-50 rounded-b-lg text-black'>
-                <div className='shadow-md p-2 max-h-10 rounded-md text-blue-700 flex items-center gap-1 bg-blue-50'>
-                    <FaFolder/> <span>Todo: </span> <span>{count.todo}</span>
+            <div className='flex justify-between items-center p-4 bg-slate-50 rounded-b-lg text-black gap-2'>
+                <div className='flex-1 shadow-md p-2 rounded-md text-blue-700 flex items-center justify-center gap-1 bg-blue-50'>
+                    <FaFolder className="text-sm"/> 
+                    <span className="text-xs">Todo: {count.todo}</span>
                 </div>
-                <div className='shadow-md px-4 py-2 max-h-10 rounded-md text-yellow-700 flex items-center gap-1 bg-yellow-50'>
-                    <FaClock/><span>Progress: </span> <span>{count.progress}</span>
+                <div className='flex-1 shadow-md p-2 rounded-md text-yellow-700 flex items-center justify-center gap-1 bg-yellow-50'>
+                    <FaClock className="text-sm"/>
+                    <span className="text-xs">Progress: {count.progress}</span>
                 </div>
-                <div className='shadow-md px-4 py-2 max-h-10 rounded-md text-green-700 flex items-center gap-1 bg-green-50'>
-                    <FaCheck/><span>Done: </span> <span>{count.done}</span>
+                <div className='flex-1 shadow-md p-2 rounded-md text-green-700 flex items-center justify-center gap-1 bg-green-50'>
+                    <FaCheck className="text-sm"/>
+                    <span className="text-xs">Done: {count.done}</span>
                 </div>
             </div>
+            
             <div className='flex items-center justify-between pt-4 border-t border-gray-100'>
-                <div className='flex flex-col items-center space-x-2'>
-                    <div className='text-xs font-medium text-green-500'>State Date</div>
+                <div className='flex flex-col items-center'>
+                    <div className='text-xs font-medium text-green-500'>Start Date</div>
                     <span className='text-xs font-medium text-green-600'>{date}</span>
                 </div>
-                <div className='flex flex-col items-center space-x-2'>
+                <div className='flex flex-col items-center'>
                     <div className='text-xs font-medium text-red-500'>End Date</div>
                     <span className='text-xs font-medium text-red-600'>{endDate}</span>
                 </div>
+                <div className='flex items-center space-x-2'>
+                    <div className={`h-2 w-2 rounded-full ${isCompleted ? 'bg-green-500' : 'bg-blue-500'}`}></div>
+                    <span className='text-xs font-medium text-gray-600'>
+                        {isCompleted ? 'Completed' : 'Active'}
+                    </span>
+                </div>
             </div>
-            <div className='flex items-center justify-between pt-4 border-t border-gray-100'>
-                {
-                    progress < 100 ?
-                        (
-                            <div className='flex items-center space-x-2'>
-                                <div className='h-2 w-2 rounded-full bg-green-500'></div>
-                                <span className='text-xs font-medium text-gray-600'>Active</span>
-                            </div>
-                        ) :
-                        (
-                            <></>
-                        )
-                }
+            
+            <div className='flex items-center justify-end pt-4 border-t border-gray-100'>
                 <button className='text-sm font-medium text-blue-600 hover:text-blue-800'>
                     View Details →
                 </button>
