@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "~/components/layout/Header";
 import TaskCard from "~/components/tasks/TaskCard";
+import LoadingSpinner from "~/components/ui/LoadingSpinner";
 import { useTaskContext } from "../contexts/TaskContext";
 
 export default function Tasks() {
   const { tasks, updateTaskStatus } = useTaskContext();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 600);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const getTasksByStatus = (status) => {
     return tasks.filter(task => task.status === status);
@@ -23,6 +34,15 @@ export default function Tasks() {
   const handleDragOver = (e) => {
     e.preventDefault();
   };
+
+  if (loading) {
+    return (
+      <section className="p-6 w-full min-h-screen">
+        <Header title="Task Board" description="Organize and track your tasks" />
+        <LoadingSpinner message="Loading task board..." />
+      </section>
+    );
+  }
 
   return (
     <section className="p-6 w-full min-h-screen">

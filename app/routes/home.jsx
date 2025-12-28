@@ -1,6 +1,7 @@
 import Header from "~/components/layout/Header";
 import CountCard from "~/components/teams/CountCard";
 import TeamCard from "~/components/teams/TeamCard";
+import LoadingSpinner from "~/components/ui/LoadingSpinner";
 import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
 import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
 import LoopOutlinedIcon from '@mui/icons-material/LoopOutlined';
@@ -10,7 +11,7 @@ import { teams } from "~/data/teams";
 import { getTotalCompleteTask, getTotalInProgressTasks, getTotalMembers, getTotalPendingTask, getTotalTeams } from "../utils/lengthFunc";
 import { getTeamProjects, getTeamTasks } from "../utils/countFunc";
 import { useTaskContext } from "../contexts/TaskContext";
-import { useMemo } from "react";
+import { useMemo, useEffect, useState } from "react";
 
 export function meta({ }) {
   return [
@@ -21,6 +22,17 @@ export function meta({ }) {
 
 export default function Home() {
   const { tasks } = useTaskContext();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    // Simulate dashboard data loading
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // 1 second delay for dashboard
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const countData = useMemo(() => [
     {
@@ -54,6 +66,18 @@ export default function Home() {
       style: `bg-green-100 text-green-800`,
     },
   ], [tasks]);
+
+  if (loading) {
+    return (
+      <main className="p-6 w-full min-h-screen">
+        <Header
+          title="Team Overview"
+          description="Manage and collaborate with your teams"
+        />
+        <LoadingSpinner message="Loading dashboard data..." />
+      </main>
+    );
+  }
 
   return (
     <main className="p-6 w-full min-h-screen">
