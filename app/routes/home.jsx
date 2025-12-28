@@ -1,15 +1,14 @@
 import Header from "~/components/layout/Header";
 import CountCard from "~/components/teams/CountCard";
-import ProjectCard from "~/components/projects/ProjectCard";
-import {
-  Groups as TeamIcon,
-  People as MembersIcon,
-  Folder as ProjectIcon,
-  Pending as PendingIcon,
-  CheckCircle as CompletedIcon,
-} from "@mui/icons-material";
-import { projects } from "~/data/projects";
-import { tasks } from "~/data/tasks";
+import TeamCard from "~/components/teams/TeamCard";
+import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
+import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
+import LoopOutlinedIcon from '@mui/icons-material/LoopOutlined';
+import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
+import FileDownloadDoneOutlinedIcon from '@mui/icons-material/FileDownloadDoneOutlined';
+import { teams } from "~/data/teams";
+import { getTotalCompleteTask, getTotalInProgressTasks, getTotalMembers, getTotalPendingTask, getTotalTeams } from "../utils/lengthFunc";
+import { totalTasks, getTeamMembers, getTeamProjects, getTeamTasks } from "../utils/countFunc";
 
 export function meta({ }) {
   return [
@@ -21,43 +20,35 @@ export function meta({ }) {
 const countData = [
   {
     label: "Total Teams",
-    count: 6,
-    icon: TeamIcon,
-    style: `bg-red-100 text-red-800`,
+    count: getTotalTeams(),
+    icon: GroupsOutlinedIcon,
+    style: `bg-purple-100 text-purple-800`,
   },
   {
     label: "Total Members",
-    count: 50,
-    icon: MembersIcon,
+    count: getTotalMembers(),
+    icon: PeopleAltOutlinedIcon,
     style: `bg-blue-100 text-blue-800`,
   },
   {
     label: "Active Projects",
-    count: 35,
-    icon: ProjectIcon,
-    style: `bg-blue-100 text-blue-800`,
+    count: getTotalInProgressTasks(),
+    icon: LoopOutlinedIcon,
+    style: `bg-yellow-100 text-yellow-500`,
   },
   {
     label: "Pending Tasks",
-    count: 28,
-    icon: PendingIcon,
-    style: `bg-yellow-100 text-yellow-800`,
+    count: getTotalPendingTask(),
+    icon: AccessTimeOutlinedIcon,
+    style: `bg-red-100 text-red-800`,
   },
   {
     label: "Task Completed",
-    count: 2,
-    icon: CompletedIcon,
+    count: getTotalCompleteTask(),
+    icon: FileDownloadDoneOutlinedIcon,
     style: `bg-green-100 text-green-800`,
   },
 ];
-
-// projects.map((data) => {
-//   console.log(data)
-// });
-
-function totalTasks(projectId) {
-  return tasks.filter(task => task.projectId === projectId).length;
-}
 
 export default function Home() {
   return (
@@ -78,15 +69,15 @@ export default function Home() {
         ))}
       </div>
       <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 ">
-        {projects.map((data, i) => (
-          <ProjectCard
-            key={i}
-            id={data.id}
+        {teams.map((data, index) => (
+          <TeamCard
+            key={data.id}
+            id={index}
             title={data.name}
-            description={data.description || "Not set yet"}
-            status={data.status || "Active"}
-            members={data.members || 10}
-            tasks={totalTasks(data.id)}
+            description={data.description}
+            status="active"
+            tasks={getTeamTasks(data.id).length}
+            projects={getTeamProjects(data.id).length}
           />
         ))}
       </div>

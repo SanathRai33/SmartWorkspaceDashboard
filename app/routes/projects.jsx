@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from "~/components/layout/Header";
-import ProjectCard from "~/components/teams/ProjectCard";
-
+import ProjectCard from "~/components/projects/ProjectCard";
 const projectData = [
     { title: 'Project Alpha', description: 'Description for Project Alpha', status: 'active', members: 10, tasks: 5 },
     { title: 'Project Beta', description: 'Description for Project Beta', status: 'pending', members: 8, tasks: 3 },

@@ -1,15 +1,19 @@
-import React from 'react'
+import React from 'react';
 
 const CountCard = ({ title, count, style, icon: Icon }) => {
   return (
-    <div className="bg-white shadow-md rounded-lg p-6 w-64 hover:shadow-lg">
-      <div className={`mb-4 w-10 h-10 flex items-center justify-center rounded-md text-4xl ${style}`}>
-        <Icon />
+    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 hover:shadow-md transition-all duration-200">
+      <div className="flex items-start justify-between flex-col gap-2">
+        <div className={`p-3 rounded-lg ${style}`}>
+          <Icon className="h-6 w-6" />
+        </div>
+        <div>
+          <p className="text-2xl font-bold text-gray-900 mt-1">{count}</p>
+          <p className="text-sm text-gray-500 font-medium">{title}</p>
+        </div>
       </div>
-      <h2 className="text-lg font-semibold text-black">{title}</h2>
-      <p className="text-2xl font-bold text-gray-600">{count}</p>
     </div>
-  )
-}
+  );
+};
 
-export default CountCard
+export default CountCard;
