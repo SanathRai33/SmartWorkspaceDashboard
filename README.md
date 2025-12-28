@@ -32,7 +32,7 @@ A responsive and modern workspace management application built with React, desig
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/SanathRai33/SmartWorkspaceDashboard
    cd frontend
    ```
 
@@ -123,7 +123,7 @@ docker run -p 3000:3000 smart-workspace-dashboard
 - Implement RESTful API or GraphQL backend
 - Add user authentication and authorization
 - Real-time updates with WebSockets
-- Database integration (PostgreSQL/MongoDB)
+- Database integration (MongoDB)
 
 ### 2. **Enhanced User Experience**
 - Add skeleton loaders instead of spinner-only loading states
@@ -133,27 +133,24 @@ docker run -p 3000:3000 smart-workspace-dashboard
 
 ### 3. **Advanced Features**
 - Task dependencies and Gantt chart views
-- File attachments and rich text editing
+- Text editing
 - Team collaboration features (comments, mentions)
 - Advanced reporting and analytics dashboard
 
 ### 4. **Performance Optimizations**
 - Implement virtual scrolling for large task lists
-- Add service worker for offline functionality
 - Optimize bundle size with code splitting
 - Add React Query for advanced caching strategies
 
 ### 5. **Testing & Quality**
 - Comprehensive unit tests with Jest and React Testing Library
 - Integration tests for critical user flows
-- End-to-end tests with Playwright or Cypress
 - Performance monitoring and error tracking
 
 ### 6. **Developer Experience**
 - Add TypeScript for better type safety
 - Implement Storybook for component documentation
 - Add ESLint and Prettier for code consistency
-- Set up CI/CD pipeline with automated testing
 
 ### 7. **Scalability & Architecture**
 - Micro-frontend architecture for larger teams
@@ -185,6 +182,15 @@ frontend/
 ├── vite.config.js           # Vite configuration
 └── README.md               # This file
 ```
+
+## 👨‍💻 Author
+
+**Sanath Rai**
+
+- **Email**: [sanathrai03@gmail.com](mailto:sanathrai03@gmail.com)
+- **GitHub**: [https://github.com/SanathRai33](https://github.com/SanathRai33)
+- **LinkedIn**: [https://www.linkedin.com/in/sanath-rai33/](https://www.linkedin.com/in/sanath-rai33/)
+- **Portfolio**: [https://sanathrai33.github.io/Portfolio/](https://sanathrai33.github.io/Portfolio/)
 
 ## 🤝 Contributing
 
