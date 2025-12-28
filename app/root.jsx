@@ -46,7 +46,7 @@ export default function App() {
     <div className="min-h-screen bg-slate-50">
       <Navbar />
 
-      <main className="px-4 py-6 flex items-center justify-center">
+      <main className=" py-4 px-4 sm:px-4 lg:px-20 flex items-center justify-center">
         <Outlet />
       </main>
     </div>

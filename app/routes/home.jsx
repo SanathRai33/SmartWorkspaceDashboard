@@ -52,7 +52,7 @@ const countData = [
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen py-4 px-4 sm:px-4 lg:px-20">
+    <main className="w-full min-h-screen">
       <Header
         title="Team Overview"
         description="Manage and collaborate with your teams"

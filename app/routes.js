@@ -4,4 +4,5 @@ export default [
   index("routes/home.jsx"),
   route("tasks", "routes/tasks.jsx"),
   route("projects", "routes/projects.jsx"),
+  route("team/:teamId", "routes/team.$teamId.jsx"),
 ];
