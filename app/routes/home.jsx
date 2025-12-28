@@ -8,7 +8,7 @@ import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import FileDownloadDoneOutlinedIcon from '@mui/icons-material/FileDownloadDoneOutlined';
 import { teams } from "~/data/teams";
 import { getTotalCompleteTask, getTotalInProgressTasks, getTotalMembers, getTotalPendingTask, getTotalTeams } from "../utils/lengthFunc";
-import { totalTasks, getTeamMembers, getTeamProjects, getTeamTasks } from "../utils/countFunc";
+import { getTeamProjects, getTeamTasks } from "../utils/countFunc";
 
 export function meta({ }) {
   return [

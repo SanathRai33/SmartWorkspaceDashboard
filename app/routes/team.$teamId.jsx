@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router";
 import { getProjectByTeamId } from "../utils/getFunc";
 import { useEffect, useState } from "react";
-import TeamDetailCard from "../components/teams/TeamDetailCard";
+import ProjectCard from "../components/projects/ProjectCard";
 import TeamDetailHeader from "../components/teams/TeamDetailHeader";
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -24,11 +24,11 @@ export default function TeamDetails() {
                 <h1 className="text-4xl text-gray-800 font-bold">Team Deatil</h1>
             </div>
             <TeamDetailHeader id={teamId} />
-            <div className="flex flex-col px-5 gap-2">
-                <h4 className="font-bold text-2xl">Projects</h4>
-                <div className="flex flex-col gap-4">
+            <div className="flex flex-col px-5 gap-2 w-full">
+                <h4 className="font-bold text-2xl">Projects ({projects.length})</h4>
+                <div className="flex flex-col gap-4 w-full">
                     {projects.map((project, index) => (
-                        <TeamDetailCard key={index} id={project.id} date={project.date} endDate={project.endDate} name={project.name} description={project.description} />
+                        <ProjectCard key={index} id={project.id} date={project.date} endDate={project.endDate} name={project.name} description={project.description} />
                     ))}
                 </div>
             </div>
