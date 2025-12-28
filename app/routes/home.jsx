@@ -52,23 +52,25 @@ const countData = [
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen">
+    <main className="p-6 w-full min-h-screen">
       <Header
         title="Team Overview"
         description="Manage and collaborate with your teams"
       />
-      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-        {countData.map((data, i) => (
-          <CountCard
-            key={i}
-            title={data.label}
-            count={data.count}
-            icon={data.icon}
-            style={data.style}
-          />
-        ))}
+      <div className="overflow-x-auto w-full">
+        <div className="inline-flex sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 min-w-max sm:min-w-0 mt-6">
+          {countData.map((data, i) => (
+            <CountCard
+              key={i}
+              title={data.label}
+              count={data.count}
+              icon={data.icon}
+              style={data.style}
+            />
+          ))}
+        </div>
       </div>
-      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 ">
+      <div className="py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 ">
         {teams.map((data, index) => (
           <TeamCard
             key={data.id}

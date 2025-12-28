@@ -14,18 +14,18 @@ export default function TeamDetails() {
     }, [teamId])
 
     return (
-        <div className="text-black w-full flex items-start px-20 py-10 justify-start flex-col gap-4">
+        <div className="text-black w-full flex items-start px-4 py-2 lg:px-20 lg:py-10 justify-start flex-col gap-4">
             <div>
                 <Link to='/' className="flex items-center justify-center gap-2 bg-slate-100 text-gray-600 px-1 py-2 rounded-md hover:shadow-sm">
                     <FaArrowLeft /> <span>Back to home</span>
                 </Link>
             </div>
             <div>
-                <h1 className="text-4xl text-gray-800 font-bold">Team Deatil</h1>
+                <h1 className="lg:text-4xl md:text-3xl text-2xl text-gray-800 font-bold">Team Deatil</h1>
             </div>
             <TeamDetailHeader id={teamId} />
             <div className="flex flex-col px-5 gap-2 w-full">
-                <h4 className="font-bold text-2xl">Projects ({projects.length})</h4>
+                <h4 className="font-bold lg:text-2xl text-lg">Projects ({projects.length})</h4>
                 <div className="flex flex-col gap-4 w-full">
                     {projects.map((project, index) => (
                         <ProjectCard key={index} id={project.id} date={project.date} endDate={project.endDate} name={project.name} description={project.description} />

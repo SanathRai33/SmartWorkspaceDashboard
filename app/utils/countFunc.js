@@ -18,7 +18,14 @@ export function getProjectTasks(projectId) {
 // }
 
 export function getTeamMembers(teamId) {
-  return teamMembers.filter(member => member.teamId === teamId);
+  const teamProjects = getTeamProjects(teamId);
+  const projectIds = teamProjects.map(p => p.id);
+  const teamTasks = tasks.filter(task => projectIds.includes(task.projectId));
+  const memberIds = new Set();
+  teamTasks.forEach(task => {
+    task.memberIds.forEach(memberId => memberIds.add(memberId));
+  });
+  return Array.from(memberIds).map(memberId => teamMembers.find(m => m.id === memberId)).filter(Boolean);
 }
 
 export function getTeamProjects(teamId) {

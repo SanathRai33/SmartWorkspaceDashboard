@@ -6,6 +6,8 @@ export const tasks = [
     projectId: "project-1",
     start: "2024-01-01",
     end: "2024-01-05",
+    description: "Set up the basic HTML and CSS structure for the dashboard layout",
+    memberIds: ["member-2", "member-12"],
   },
   {
     id: "task-2",
@@ -14,6 +16,8 @@ export const tasks = [
     projectId: "project-1",
     start: "2024-01-06",
     end: "2024-01-10",
+    description: "Implement responsive navigation bar with menu items and branding",
+    memberIds: ["member-2", "member-14"],
   },
   {
     id: "task-3",
@@ -22,6 +26,8 @@ export const tasks = [
     projectId: "project-1",
     start: "2024-01-11",
     end: "2024-01-15",
+    description: "Review and approve final UI designs with stakeholders",
+    memberIds: ["member-1", "member-12"],
   },
   {
     id: "task-4",
@@ -30,6 +36,8 @@ export const tasks = [
     projectId: "project-2",
     start: "2024-01-10",
     end: "2024-01-12",
+    description: "Create wireframes and mockups for the user login interface",
+    memberIds: ["member-1", "member-14"],
   },
   {
     id: "task-5",
@@ -38,6 +46,8 @@ export const tasks = [
     projectId: "project-2",
     start: "2024-01-13",
     end: "2024-01-18",
+    description: "Integrate OAuth 2.0 authentication with Google and other providers",
+    memberIds: ["member-2", "member-3"],
   },
   {
     id: "task-6",
@@ -46,6 +56,8 @@ export const tasks = [
     projectId: "project-2",
     start: "2024-01-19",
     end: "2024-01-22",
+    description: "Implement secure password reset functionality with email verification",
+    memberIds: ["member-2", "member-3"],
   },
   {
     id: "task-7",
@@ -54,6 +66,8 @@ export const tasks = [
     projectId: "project-3",
     start: "2024-01-05",
     end: "2024-01-08",
+    description: "Initialize Express.js server with basic middleware and routing",
+    memberIds: ["member-3", "member-5"],
   },
   {
     id: "task-8",
@@ -62,6 +76,8 @@ export const tasks = [
     projectId: "project-3",
     start: "2024-01-09",
     end: "2024-01-12",
+    description: "Implement rate limiting to prevent API abuse and ensure fair usage",
+    memberIds: ["member-3", "member-11"],
   },
   {
     id: "task-9",
@@ -70,6 +86,8 @@ export const tasks = [
     projectId: "project-3",
     start: "2024-01-13",
     end: "2024-01-16",
+    description: "Add comprehensive logging system for monitoring and debugging",
+    memberIds: ["member-3", "member-5"],
   },
   {
     id: "task-10",
@@ -78,6 +96,8 @@ export const tasks = [
     projectId: "project-3",
     start: "2024-01-17",
     end: "2024-01-20",
+    description: "Create Swagger/OpenAPI documentation for all API endpoints",
+    memberIds: ["member-3", "member-4"],
   },
   {
     id: "task-11",
@@ -86,6 +106,8 @@ export const tasks = [
     projectId: "project-4",
     start: "2024-01-10",
     end: "2024-01-12",
+    description: "Design the database schema for user accounts and profiles",
+    memberIds: ["member-4"],
   },
   {
     id: "task-12",
@@ -94,6 +116,8 @@ export const tasks = [
     projectId: "project-4",
     start: "2024-01-13",
     end: "2024-01-15",
+    description: "Establish foreign key relationships between projects and other entities",
+    memberIds: ["member-4"],
   },
   {
     id: "task-13",
@@ -102,6 +126,8 @@ export const tasks = [
     projectId: "project-4",
     start: "2024-01-16",
     end: "2024-01-18",
+    description: "Create database indexes for improved query performance",
+    memberIds: ["member-4", "member-5"],
   },
   {
     id: "task-14",
@@ -110,6 +136,8 @@ export const tasks = [
     projectId: "project-5",
     start: "2024-01-20",
     end: "2024-01-23",
+    description: "Configure Socket.io server for real-time bidirectional communication",
+    memberIds: ["member-3", "member-5"],
   },
   {
     id: "task-15",
@@ -118,6 +146,8 @@ export const tasks = [
     projectId: "project-5",
     start: "2024-01-24",
     end: "2024-01-27",
+    description: "Add real-time data synchronization across connected clients",
+    memberIds: ["member-3", "member-5"],
   },
   {
     id: "task-16",
@@ -126,6 +156,8 @@ export const tasks = [
     projectId: "project-6",
     start: "2024-01-15",
     end: "2024-01-16",
+    description: "Initialize new Xcode project with proper configuration and dependencies",
+    memberIds: ["member-6"],
   },
   {
     id: "task-17",
@@ -134,6 +166,8 @@ export const tasks = [
     projectId: "project-6",
     start: "2024-01-17",
     end: "2024-01-20",
+    description: "Build navigation controller and screen transitions for iOS app",
+    memberIds: ["member-6"],
   },
   {
     id: "task-18",
@@ -142,6 +176,8 @@ export const tasks = [
     projectId: "project-6",
     start: "2024-01-21",
     end: "2024-01-25",
+    description: "Integrate push notification service for iOS devices",
+    memberIds: ["member-6"],
   },
   {
     id: "task-19",
@@ -150,6 +186,8 @@ export const tasks = [
     projectId: "project-7",
     start: "2024-01-16",
     end: "2024-01-17",
+    description: "Set up new Android Studio project with Gradle configuration",
+    memberIds: ["member-7"],
   },
   {
     id: "task-20",
@@ -158,6 +196,8 @@ export const tasks = [
     projectId: "project-7",
     start: "2024-01-18",
     end: "2024-01-22",
+    description: "Create the main activity layout and user interface components",
+    memberIds: ["member-7", "member-1"],
   },
   {
     id: "task-21",
@@ -166,6 +206,8 @@ export const tasks = [
     projectId: "project-7",
     start: "2024-01-23",
     end: "2024-01-26",
+    description: "Add Firebase SDK for authentication, database, and analytics",
+    memberIds: ["member-7", "member-3"],
   },
   {
     id: "task-22",
@@ -174,6 +216,8 @@ export const tasks = [
     projectId: "project-8",
     start: "2024-01-10",
     end: "2024-01-15",
+    description: "Develop comprehensive unit test suite for core functionality",
+    memberIds: ["member-8", "member-9"],
   },
   {
     id: "task-23",
@@ -182,6 +226,8 @@ export const tasks = [
     projectId: "project-8",
     start: "2024-01-16",
     end: "2024-01-20",
+    description: "Build integration tests to verify component interactions",
+    memberIds: ["member-8", "member-9"],
   },
   {
     id: "task-24",
@@ -190,6 +236,8 @@ export const tasks = [
     projectId: "project-8",
     start: "2024-01-21",
     end: "2024-01-25",
+    description: "Configure end-to-end testing framework with browser automation",
+    memberIds: ["member-9"],
   },
   {
     id: "task-25",
@@ -198,6 +246,8 @@ export const tasks = [
     projectId: "project-9",
     start: "2024-01-18",
     end: "2024-01-20",
+    description: "Connect bug tracking system with JIRA API for issue synchronization",
+    memberIds: ["member-8", "member-9"],
   },
   {
     id: "task-26",
@@ -206,6 +256,8 @@ export const tasks = [
     projectId: "project-9",
     start: "2024-01-21",
     end: "2024-01-25",
+    description: "Design templates and workflow for generating detailed bug reports",
+    memberIds: ["member-8"],
   },
   {
     id: "task-27",
@@ -214,6 +266,8 @@ export const tasks = [
     projectId: "project-9",
     start: "2024-01-26",
     end: "2024-01-30",
+    description: "Implement automated tools for identifying and reporting bugs",
+    memberIds: ["member-9"],
   },
   {
     id: "task-28",
@@ -222,6 +276,8 @@ export const tasks = [
     projectId: "project-10",
     start: "2024-01-05",
     end: "2024-01-08",
+    description: "Configure GitHub Actions workflows for automated CI/CD processes",
+    memberIds: ["member-5", "member-10"],
   },
   {
     id: "task-29",
@@ -230,6 +286,8 @@ export const tasks = [
     projectId: "project-10",
     start: "2024-01-09",
     end: "2024-01-12",
+    description: "Create Dockerfiles and compose configuration for containerization",
+    memberIds: ["member-5", "member-10"],
   },
   {
     id: "task-30",
@@ -238,6 +296,8 @@ export const tasks = [
     projectId: "project-10",
     start: "2024-01-13",
     end: "2024-01-17",
+    description: "Set up AWS infrastructure and deployment pipeline for production",
+    memberIds: ["member-10", "member-11"],
   },
   {
     id: "task-31",
@@ -246,6 +306,8 @@ export const tasks = [
     projectId: "project-11",
     start: "2024-01-15",
     end: "2024-01-17",
+    description: "Deploy Grafana dashboard for visualization and monitoring",
+    memberIds: ["member-5", "member-10"],
   },
   {
     id: "task-32",
@@ -254,6 +316,8 @@ export const tasks = [
     projectId: "project-11",
     start: "2024-01-18",
     end: "2024-01-22",
+    description: "Configure Prometheus for metrics collection and storage",
+    memberIds: ["member-5", "member-10"],
   },
   {
     id: "task-33",
@@ -262,6 +326,8 @@ export const tasks = [
     projectId: "project-11",
     start: "2024-01-23",
     end: "2024-01-26",
+    description: "Set up alerting rules and notification channels for system monitoring",
+    memberIds: ["member-5", "member-11"],
   },
   {
     id: "task-34",
@@ -270,6 +336,8 @@ export const tasks = [
     projectId: "project-12",
     start: "2024-01-27",
     end: "2024-01-30",
+    description: "Execute automated security vulnerability scanning across the codebase",
+    memberIds: ["member-11"],
   },
   {
     id: "task-35",
@@ -278,6 +346,8 @@ export const tasks = [
     projectId: "project-12",
     start: "2024-01-31",
     end: "2024-02-03",
+    description: "Apply patches and fixes for identified security vulnerabilities",
+    memberIds: ["member-11"],
   },
   {
     id: "task-36",
@@ -286,6 +356,8 @@ export const tasks = [
     projectId: "project-13",
     start: "2024-01-08",
     end: "2024-01-10",
+    description: "Design and document the primary and secondary color scheme",
+    memberIds: ["member-12", "member-13"],
   },
   {
     id: "task-37",
@@ -294,6 +366,8 @@ export const tasks = [
     projectId: "project-13",
     start: "2024-01-11",
     end: "2024-01-15",
+    description: "Create reusable UI components following design system guidelines",
+    memberIds: ["member-12", "member-14"],
   },
   {
     id: "task-38",
@@ -302,6 +376,8 @@ export const tasks = [
     projectId: "project-13",
     start: "2024-01-16",
     end: "2024-01-19",
+    description: "Write comprehensive documentation for design system usage",
+    memberIds: ["member-12", "member-13"],
   },
   {
     id: "task-39",
@@ -310,6 +386,8 @@ export const tasks = [
     projectId: "project-14",
     start: "2024-01-12",
     end: "2024-01-14",
+    description: "Create multiple logo variations for different use cases and sizes",
+    memberIds: ["member-13"],
   },
   {
     id: "task-40",
@@ -318,6 +396,8 @@ export const tasks = [
     projectId: "project-14",
     start: "2024-01-15",
     end: "2024-01-18",
+    description: "Develop brand assets including icons, patterns, and illustrations",
+    memberIds: ["member-13", "member-12"],
   },
   {
     id: "task-41",
@@ -326,5 +406,7 @@ export const tasks = [
     projectId: "project-14",
     start: "2024-01-19",
     end: "2024-01-22",
+    description: "Refresh marketing collateral with new brand identity elements",
+    memberIds: ["member-13"],
   },
 ];

@@ -1,6 +1,7 @@
 import { projects } from "~/data/projects";
 import { tasks } from "../data/tasks";
 import { teams } from "../data/teams";
+import { teamMembers } from "../data/members";
 
 export function getTeamByTeamId(teamId){
   return teams.find((t) => t.id == teamId);
@@ -17,3 +18,6 @@ export function getDoneTaskByProjectId(projectId) {
   return { total: total.length, done };
 }
 
+export function getMembersByTaskId(taskId){
+  return teamMembers.filter((mem) => mem.taskIds.includes(taskId));
+}

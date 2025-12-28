@@ -6,7 +6,7 @@ export default function Projects() {
 
 
   return (
-    <div className="p-6 w-full bg-gray-100 min-h-screen">
+    <div className="p-6 w-full min-h-screen">
       <Header title="Projects" description="Manage and collaborate on your projects" />
       <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 ">
         {projects.map((project, index) => (
